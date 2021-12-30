@@ -55,6 +55,14 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			'bool',
 			false);
 		addOption(option);
+		
+		// Uhhhh maybe left or right scroll?
+		var option:Option = new Option('WIP Right Scroll', //Name
+			'If checked, notes go Right instead of Up Down And Left, simple enough.', //Description
+			'rightScroll', //Save data variable name
+			'bool', //Variable type
+			false); //Default value
+		addOption(option);
 
 		var option:Option = new Option('Ghost Tapping',
 			"If checked, you won't get misses from pressing keys\nwhile there are no notes able to be hit.",
@@ -70,7 +78,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			false);
 		addOption(option);
 
-		/*var option:Option = new Option('Note Delay',
+		/*var option:Option = new Option('Note Delay', // WAIT WHAT IS THIS???
 			'Changes how late a note is spawned.\nUseful for preventing audio lag from wireless earphones.',
 			'noteOffset',
 			'int',
@@ -132,7 +140,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			10);
 		option.scrollSpeed = 5;
 		option.minValue = 2;
-		option.maxValue = 10;
+		option.maxValue = 13;
 		option.changeValue = 0.1;
 		addOption(option);
 
