@@ -43,6 +43,7 @@ class WeekData {
 	public var startUnlocked:Bool;
 	public var hideStoryMode:Bool;
 	public var hideFreeplay:Bool;
+	public var backgroundColor:Array<Int>;
 	public var difficulties:String;
 
 	public static function createWeekFile():WeekFile {
@@ -54,6 +55,7 @@ class WeekData {
 			storyName: 'Your New Week',
 			weekName: 'Custom Week',
 			freeplayColor: [146, 113, 253],
+			backgroundColor: [146, 113, 253],
 			startUnlocked: true,
 			hideStoryMode: false,
 			hideFreeplay: false,
@@ -71,6 +73,7 @@ class WeekData {
 		storyName = weekFile.storyName;
 		weekName = weekFile.weekName;
 		freeplayColor = weekFile.freeplayColor;
+		backgroundColor = weekFile.backgroundColor;
 		startUnlocked = weekFile.startUnlocked;
 		hideStoryMode = weekFile.hideStoryMode;
 		hideFreeplay = weekFile.hideFreeplay;
