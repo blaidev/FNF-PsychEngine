@@ -73,7 +73,7 @@ class PlayState extends MusicBeatState
 		['Good', 0.8], //From 70% to 79%
 		['Great', 0.9], //From 80% to 89%
 		['Sick!', 1], //From 90% to 99%
-		['Perfect!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['Perfect!!', 1.1] //Hope it doesnt break anything
 	];
 	
 	public var modchartTweens:Map<String, FlxTween> = new Map<String, FlxTween>();
@@ -370,7 +370,7 @@ class PlayState extends MusicBeatState
 		if(stageData == null) { //Stage couldn't be found, create a dummy stage for preventing a crash
 			stageData = {
 				directory: "",
-				defaultZoom: 0.9,
+				defaultZoom: 1.2,
 				isPixelStage: false,
 			
 				boyfriend: [770, 100],
@@ -765,7 +765,7 @@ class PlayState extends MusicBeatState
 		}
 		if(curStage == 'philly') insert(members.indexOf(blammedLightsBlack) + 1, phillyCityLightsEvent);
 		blammedLightsBlack = modchartSprites.get('blammedLightsBlack');
-		blammedLightsBlack.alpha = 0.0;
+		blammedLightsBlack.alpha = 0.0; // sussy
 
 		var gfVersion:String = SONG.gfVersion;
 		if(gfVersion == null || gfVersion.length < 1) {
